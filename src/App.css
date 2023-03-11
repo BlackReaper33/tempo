@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "sans";
+}
+
+@font-face {
+  font-family: "sans";
+  src: url(sans.ttf);
+}
+/*Global*/
+button {
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 100px;
+  margin: 0.4rem;
+}
+.fileicon {
+  border: none;
+  background-color: #000;
+  color: #D3D3D3;
+  padding: 15px 20px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 100px;
+  margin: 0.4rem;
+  height: 5.6vh;
+}
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: red;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+h1 {
+  letter-spacing: 0.05em;
+
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+h1:hover {
+  color: #d93025;
+}
+/*Sign In*/
+/* .Login-Svg{
+  margin: 0 auto;
+  width: 300px;
+  height: 100%;
+} */
+.sign-in-image{
+  width: 240px;
+  height: 100%;
+  margin: 0 auto;
+  pointer-events: none;
+}
+.sign-in-button {
+  color: #282c34;
+  background: white;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sign-in-button .sign-in-google {
+  width: 20px !important ;
+  height: 100% !important;
+  margin: 0px 5px !important;
+  float: left;
+}
+
+/*Sign Out*/
+.sign-out {
+  background-color: #d93025;
+  padding: 5px 13px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.profile-icon {
+  background-color: white;
+  color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-icon {
+  background-color: white;
+  color: #000;
+  border-radius: 40%;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+  position: center;
+}
+.sign-out:hover {
+  background-color: #ffff;
+  color: #d93025;
+}
+.discord-link {
+  background-color: #5865F2;
+  color: black;
+  padding: 5px 13px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.discord-link:hover {
+  background-color: black;
+  color: #5865F2;
+}
+.projz-link {
+  background-color: #3f1414;
+  color: white;
+  padding: 5px 13px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.projz-link:hover {
+  background-color: white;
+  color: #3f1414;
+}
+.amino-link {
+  background-color: #00008B;
+  color: white;
+  padding: 5px 13px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.amino-link:hover {
+  background-color: white;
+  color: #00008B;
+}
+
+/* Header Section */
+.App {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.App header {
+  background-color: #181717;
+  height: 7vh;
+  min-height: 50px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  z-index: 99;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 7px;
+  font-size: 0.8rem;
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(background.png) no-repeat;
+  background-size: cover;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+/*Char Section*/
+main {
+  padding: 10px;
+  height: 88vh;
+  margin: 7vh 0 7vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+ul,
+li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 8px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: left;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: white;
+  background: #575757;
+  align-self: flex-end;
+}
+.received p {
+  background: #797979;
+  color: white;
+}
+.next {
+  margin-bottom: 16px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+  color: white;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+.link-preview-image{
+  height: 100px;
+  width: 150px;
+  border-radius: 0%;
+}
+/*Custom Scrollbar for Chat Section*/
+main::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: rgb(40, 37, 53);
+}
+
+main::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #fff;
+}
+
+/*Input Secction*/
+form {
+  height: 7vh;
+  position: fixed;
+  bottom: 0;
+  background: url(background.png) no-repeat;
+  width: 100%;
+  /* max-width: 100%; */
+  display: flex;
+  font-size: 0.72rem;
+  overflow: hidden;
+}
+
+form button {
+  /* border-radius: 50%; */
+  background-color: #000;
+  color: #fff;
+  padding: 10.8px 21.6px !important;
+}
+
+
+input {
+  line-height: 1.2;
+  height: 5.6vh;
+  width: 100%;
+  font-size: 0.8rem;
+  background: #000;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0 8px;
+  border-radius: 40px;
+  margin: 0.32rem;
+}
+
+button:disabled {
+  height: 5.6vh;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chat-message-button {
+  height: 5.6vh;
+}
+.privacy-policy{
+  background-color:#1f232e;
+  color:white;
+  overflow-y: scroll;
+  height:100vh;
+  margin:7vh 0 0;
+}
+h1{
+ color:red;
+}
+.privacy-link {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+.privacy-link a {
+  text-decoration: underline;
+  color: black;
+}
+
+.privacy-link:hover {
+  color: #e9e9e9;
+}
+.username-sent{
+  display:flex;
+  color:black;
+}
+.username-received{
+  color: black;
+  display:flex;
+ /* flex-direction:row-reverse;*/
+}
+.message-image-preview {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+
+@media (max-width: 425px) {
+  .App header {
+    font-size: 0.6rem;
+  }
+
+  .sign-out {
+    padding: 10px 10px;
+  }
+  .discord-link{
+      padding: 10px 10px;
+    }
+  .projz-link{
+      padding: 10px 10px;
+    }
+}
+
